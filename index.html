@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#06130d" />
+    <meta
+      name="description"
+      content="Darshan Thorath ? Software Developer portfolio."
+    />
+    <title>Darshan Thorath | root@developer</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <canvas id="matrix" aria-hidden="true"></canvas>
+    <div class="scanlines" aria-hidden="true"></div>
+
+    <header class="topbar">
+      <a class="brand" href="#home">
+        <span class="brand-symbol">[D]</span>
+        darshan<span class="green">.dev</span>
+      </a>
+
+      <button class="menu-toggle" id="menuToggle" aria-label="Open navigation">
+        ?
+      </button>
+
+      <nav id="nav">
+        <a href="#home">~/home</a>
+        <a href="#about">~/about</a>
+        <a href="#skills">~/skills</a>
+        <a href="#projects">~/projects</a>
+        <a href="#contact">~/contact</a>
+        <a class="nav-resume" href="#contact">CONTACT <span>?</span></a>
+      </nav>
+    </header>
+
+    <main>
+      <section class="hero section" id="home">
+        <div class="hero-copy reveal">
+          <div class="system-line">
+            <span class="pulse"></span>
+            SYSTEM ONLINE <span class="divider">/</span> PORTFOLIO.EXE
+          </div>
+
+          <p class="prompt">root@darshan:~$ whoami</p>
+
+          <h1>
+            Hi, I'm<br />
+            <span class="glitch" data-text="Darshan Thorath">Darshan Thorath</span>
+            <span class="cursor">_</span>
+          </h1>
+
+          <p class="role-line">
+            &gt; <span id="typedRole">Software Developer</span>
+            <span class="type-cursor">|</span>
+          </p>
+
+          <p class="hero-description">
+            I design and build practical web experiences, connect interfaces to APIs,
+            and turn ideas into reliable software. I enjoy solving real problems with
+            clean code and thoughtful UX.
+          </p>
+
+          <div class="hero-actions">
+            <a class="button primary" href="#projects">
+              <span>./view_projects</span>
+              <b>?</b>
+            </a>
+            <a class="button secondary" href="#contact">
+              <span>./contact_me</span>
+              <b>?</b>
+            </a>
+          </div>
+
+          <div class="hero-stats">
+           
+            <span><strong>4+</strong> projects built</span>
+            <span><strong>100%</strong> curiosity</span>
+          </div>
+
+          <div class="hero-status">
+            <span><i></i> OPEN TO INTERNSHIPS & OPPORTUNITIES</span>
+            <span>INDIA ? IST</span>
+          </div>
+        </div>
+
+        <div class="terminal-window reveal">
+          <div class="terminal-head">
+            <div class="window-dots">
+              <i></i><i></i><i></i>
+            </div>
+            <span>darshan@portfolio: ~/profile</span>
+            <button id="clearTerminal" title="Reset terminal">?</button>
+          </div>
+
+          <div class="terminal-body" id="terminalOutput">
+            <p class="dim">Welcome to Darshan's interactive terminal.</p>
+            <p>
+              <span class="green">root@darshan</span>
+              <span class="blue">~</span>$
+              <span class="cmd">cat profile.json</span>
+            </p>
+            <p class="json">{</p>
+            <p class="json indent">"name": <span>"Darshan Thorath"</span>,</p>
+            <p class="json indent">"role": <span>"Software Developer"</span>,</p>
+            <p class="json indent">"stack": <span>"Java ? Web ? Full Stack"</span>,</p>
+            <p class="json indent">"status": <span class="green">"ready_to_build"</span></p>
+            <p class="json">}</p>
+            <p>
+              <span class="green">root@darshan</span>
+              <span class="blue">~</span>$
+              <span class="cmd">help</span>
+            </p>
+            <p class="dim">
+              Try:
+              <button class="term-command" data-command="about">about</button>
+              <button class="term-command" data-command="skills">skills</button>
+              <button class="term-command" data-command="projects">projects</button>
+              <button class="term-command" data-command="contact">contact</button>
+            </p>
+          </div>
+
+          <form id="terminalForm" class="terminal-input">
+            <label for="terminalCommand"><span class="green">?</span> ~</label>
+            <input
+              id="terminalCommand"
+              autocomplete="off"
+              spellcheck="false"
+              placeholder="type a command..."
+              aria-label="Terminal command"
+            />
+            <button type="submit">RUN</button>
+          </form>
+
+          <div class="terminal-foot">
+            <span><i></i> LOCAL SESSION</span>
+            <span>UTF-8 <b>?</b></span>
+          </div>
+        </div>
+
+        <a class="scroll-cue" href="#about"><span></span> SCROLL TO INITIALIZE</a>
+      </section>
+
+      <section class="section about-section" id="about">
+        <div class="section-heading reveal">
+          <p class="kicker">01 // ABOUT</p>
+          <h2>
+            Not just writing code.<br />
+            <span class="green">Building solutions.</span>
+          </h2>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-copy reveal">
+            <p class="prompt">$ cat about.txt</p>
+            <p>
+              I'm a BE Computer Science and Business Systems student, expected to
+              graduate in 2027. I enjoy creating web applications, designing clean
+              interfaces, and building software that makes everyday tasks simpler.
+            </p>
+            <p>
+              I like learning by building: shaping a user experience, integrating
+              APIs, debugging production issues, and improving a project one step at a
+              time. I'm looking for opportunities to contribute to a team and grow as a
+              software engineer.
+            </p>
+            <a class="text-link" href="#contact">LET'S COLLABORATE <span>?</span></a>
+          </div>
+
+          <div class="info-panel reveal">
+            <div class="panel-title"><span>?</span> system.info</div>
+            <div class="info-row"><span>LOCATION</span><b>Belagavi, India</b></div>
+            <div class="info-row"><span>EDUCATION</span><b>BE ? CSBS ? 2027</b></div>
+            <div class="info-row"><span>FOCUS</span><b>Web / Java / Full Stack</b></div>
+            <div class="info-row"><span>MODE</span><b class="green">Learning & building</b></div>
+            <div class="panel-bottom"><span class="pulse"></span> PROFILE STATUS: ACTIVE</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section skills-section" id="skills">
+        <div class="section-heading reveal">
+          <p class="kicker">02 // SKILL_TREE</p>
+          <h2>Tools in my <span class="green">toolbox.</span></h2>
+          <p class="section-sub">$ ls -la /skills</p>
+        </div>
+
+        <div class="skills-grid">
+          <article class="skill-card reveal">
+            <div class="skill-top"><span>01</span><b>LANGUAGES</b><span>?</span></div>
+            <h3>Logic & syntax</h3>
+            <p>Building strong fundamentals with practical, readable problem solving.</p>
+            <div class="chips">
+              <span>Java</span>
+              <span>JavaScript</span>
+              <span>SQL</span>
+              <span>HTML5</span>
+              <span>CSS3</span>
+            </div>
+          </article>
+
+          <article class="skill-card reveal">
+            <div class="skill-top"><span>02</span><b>WEB DEV</b><span>?</span></div>
+            <h3>Frontend + backend</h3>
+            <p>Responsive interfaces and functional applications built around user needs.</p>
+            <div class="chips">
+              <span>Node.js</span>
+              <span>Express.js</span>
+              <span>REST APIs</span>
+              <span>Responsive UI</span>
+            </div>
+          </article>
+
+          <article class="skill-card reveal">
+            <div class="skill-top"><span>03</span><b>DATA & TOOLS</b><span>?</span></div>
+            <h3>Ship and maintain</h3>
+            <p>Managing data, workflows, and the tooling needed to deliver consistently.</p>
+            <div class="chips">
+              <span>MongoDB</span>
+              <span>Git</span>
+              <span>GitHub</span>
+              <span>Excel</span>
+            </div>
+          </article>
+
+          <article class="skill-card reveal">
+            <div class="skill-top"><span>04</span><b>CORE SKILLS</b><span>?</span></div>
+            <h3>Think, test, improve</h3>
+            <p>Structured debugging, collaboration, and rapid iteration with a builder mindset.</p>
+            <div class="chips">
+              <span>Debugging</span>
+              <span>Problem Solving</span>
+              <span>Teamwork</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section projects-section" id="projects">
+        <div class="section-heading reveal">
+          <p class="kicker">03 // PROJECTS</p>
+          <h2>Selected <span class="green">builds.</span></h2>
+          <p class="section-sub">$ find ./projects -maxdepth 1 -type d</p>
+        </div>
+
+        <div class="projects-grid">
+          <article class="project-card reveal">
+            <div class="project-art finance-art">
+              <span class="art-tag">[ FINTECH ]</span>
+              <div class="mini-dashboard">
+                <div class="mini-bar"></div>
+                <div class="mini-number">? 12,480</div>
+                <div class="mini-caption">MONTHLY SPENDING</div>
+                <div class="mini-graph">
+                  <i></i><i></i><i></i><i></i><i></i><i></i><i></i>
+                </div>
+              </div>
+              <span class="art-index">01</span>
+            </div>
+            <div class="project-body">
+              <p class="project-label">FULL-STACK / ANDROID APP</p>
+              <h3>AI-Based Expense Tracker with Payment Integration</h3>
+              <p>
+                A personal finance app concept for tracking spending patterns,
+                categorizing transactions, and surfacing actionable summaries through a
+                web and Android-ready interface.
+              </p>
+              <div class="chips">
+                <span>JavaScript</span>
+                <span>Node.js</span>
+                <span>Express</span>
+                <span>MongoDB</span>
+              </div>
+              <a class="project-link" href="#contact">ASK ME ABOUT THIS PROJECT <span>?</span></a>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-art scan-art">
+              <span class="art-tag">[ NETWORK SECURITY ]</span>
+              <div class="radar">
+                <div class="radar-cross"></div>
+                <div class="radar-sweep"></div>
+                <i class="radar-dot"></i>
+                <span class="radar-label">SCAN DETECTED</span>
+              </div>
+              <span class="art-index">02</span>
+            </div>
+            <div class="project-body">
+              <p class="project-label">SECURITY ANALYZER</p>
+              <h3>Port Scan Analyzer</h3>
+              <p>
+                A defensive networking project focused on recognizing suspicious activity
+                patterns and presenting clear alerts through a lightweight dashboard and
+                detection logic.
+              </p>
+              <div class="chips">
+                <span>Python</span>
+                <span>Networking</span>
+                <span>Detection Logic</span>
+              </div>
+              <a class="project-link" href="#contact">ASK ME ABOUT THIS PROJECT <span>?</span></a>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-art farm-art">
+              <span class="art-tag">[ SUSTAINABILITY ]</span>
+              <div class="farm-symbol">?</div>
+              <div class="farm-lines"></div>
+              <span class="art-index">03</span>
+            </div>
+            <div class="project-body">
+              <p class="project-label">INNOVATION PROJECT</p>
+              <h3>Gamified Sustainable Farming</h3>
+              <p>
+                A concept project that combines sustainability goals with interactive
+                engagement, helping users understand impact through progress-based,
+                game-inspired design.
+              </p>
+              <div class="chips">
+                <span>Research</span>
+                <span>UI Design</span>
+                <span>Sustainability</span>
+              </div>
+              <a class="project-link" href="#contact">ASK ME ABOUT THIS PROJECT <span>?</span></a>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-art flight-art">
+              <span class="art-tag">[ DATABASE SYSTEMS ]</span>
+              <div class="flight-ticket">
+                <span>BOARDING PASS / 001</span>
+                <b>BLR <i>???? ? ????</i> DEL</b>
+                <small>BENGALURU <span>NEW DELHI</span></small>
+              </div>
+              <span class="art-index">04</span>
+            </div>
+            <div class="project-body">
+              <p class="project-label">DBMS PROJECT</p>
+              <h3>Airplane Booking System</h3>
+              <p>
+                A database-driven application concept for organizing flight data,
+                passenger details, and booking workflows with clear data relationships and
+                operational flow.
+              </p>
+              <div class="chips">
+                <span>SQL</span>
+                <span>DBMS</span>
+                <span>Data Modeling</span>
+              </div>
+              <a class="project-link" href="#contact">ASK ME ABOUT THIS PROJECT <span>?</span></a>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section journey-section" id="journey">
+        <div class="section-heading reveal">
+          <p class="kicker">04 // JOURNEY</p>
+          <h2>Progress is a <span class="green">process.</span></h2>
+        </div>
+
+        <div class="timeline">
+          <div class="timeline-item reveal">
+            <span class="timeline-marker"></span>
+            <div class="timeline-date">2024 - 2027</div>
+            <div>
+              <h3>BE ? Computer Science and Business Systems</h3>
+              <p>
+                Building foundations in programming, databases, software engineering, and
+                technology.
+              </p>
+              <span class="badge">EDUCATION / EXPECTED 2027</span>
+            </div>
+          </div>
+
+         
+
+          <div class="timeline-item reveal">
+            <span class="timeline-marker"></span>
+            <div class="timeline-date">ONGOING</div>
+            <div>
+              <h3>Projects & coding practice</h3>
+              <p>
+                Improving through hands-on projects, debugging, and regular coding
+                practice.
+              </p>
+              <span class="badge">CONTINUOUS LEARNING</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="section contact-section" id="contact">
+        <div class="contact-panel reveal">
+          <p class="kicker">05 // CONTACT</p>
+          <h2>
+            Let's build something<br />
+            <span class="green">worth shipping.</span>
+          </h2>
+          <p>
+            Open to software development internships, entry-level roles,
+            collaborations, and interesting projects.
+          </p>
+          <a class="button primary" href="mailto:darshanthorath@gmail.com">
+            ./send_email <b>?</b>
+          </a>
+
+          <div class="contact-grid">
+            <a href="mailto:darshanthorath@gmail.com">
+              <span>EMAIL</span>
+              <b>darshanthorath@gmail.com</b>
+            </a>
+            <a href="https://www.linkedin.com/" target="_blank" rel="noreferrer">
+              <span>LINKEDIN</span>
+              <b>Connect with me ?</b>
+            </a>
+            <a href="https://github.com/" target="_blank" rel="noreferrer">
+              <span>GITHUB</span>
+              <b>View repositories ?</b>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="footer">
+      <a class="brand" href="#home">
+        <span class="brand-symbol">[D]</span>
+        darshan<span class="green">.dev</span>
+      </a>
+      <span>Built with <span class="green">?</span> and JavaScript</span>
+      <a href="#home">BACK TO TOP ?</a>
+      <small>? <span id="year"></span> Darshan Thorath</small>
+    </footer>
+
+    <button class="back-to-top" id="backToTop" type="button" aria-label="Back to top">
+      <span aria-hidden="true">↑</span>
+    </button>
+
+    <script src="script.js"></script>
+  </body>
+</html>
